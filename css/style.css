@@ -9,6 +9,10 @@ header {
     height: 70px;
 }
 
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header h1 {
     display: inline-block;
     font-size: 45px;
@@ -54,7 +58,7 @@ a {
 }
 
 .container {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -108,6 +112,10 @@ a {
     left: 0;
 }
 
+#close:checked ~ .sidebar {
+    left: -300px;
+}
+
 .banner {
     background-color: rgb(41, 22, 22);
 }
@@ -120,6 +128,46 @@ a {
 
 section {
     padding: 50px 0;
+}
+
+#about {
+    background-color: rgba(49, 36, 36);
+}
+
+section h2 {
+    padding-bottom: 5px;
+}
+
+section h3 {
+    padding-bottom: 25px;
+    margin: 20px;
+    position: relative;
+}
+
+section h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    background-color: rgb(83, 62, 62);
+    left: calc(50% - 60px);
+}
+
+section h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 40px;
+    height: 4px;
+    background-color: rgb(68, 65, 65);
+    left: calc(50% - 20px);
+}
+
+.container p{
+    text-align: left;
 }
 
 @media (max-width: 768px) {
